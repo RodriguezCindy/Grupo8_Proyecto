@@ -16,5 +16,20 @@ namespace ProyectoFinal_G8.Vistas
         {
             InitializeComponent();
         }
+
+        private void CheckMostrar_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_cancelar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void LoginView_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
