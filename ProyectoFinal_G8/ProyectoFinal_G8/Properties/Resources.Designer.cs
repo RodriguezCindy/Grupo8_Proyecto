@@ -63,6 +63,16 @@ namespace ProyectoFinal_G8.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Cliente {
+            get {
+                object obj = ResourceManager.GetObject("Cliente", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap factura {
             get {
                 object obj = ResourceManager.GetObject("factura", resourceCulture);
@@ -96,6 +106,16 @@ namespace ProyectoFinal_G8.Properties {
         internal static System.Drawing.Bitmap repartidor {
             get {
                 object obj = ResourceManager.GetObject("repartidor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap repartidor1 {
+            get {
+                object obj = ResourceManager.GetObject("repartidor1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

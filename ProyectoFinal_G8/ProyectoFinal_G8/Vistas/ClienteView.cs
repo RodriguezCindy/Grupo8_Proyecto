@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProyectoFinal_G8.Controladores;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,8 @@ namespace ProyectoFinal_G8.Vistas
         public ClienteView()
         {
             InitializeComponent();
+
+            ClientesController controlador = new ClientesController(this);
         }
     }
 }

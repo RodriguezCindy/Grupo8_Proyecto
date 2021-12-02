@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProyectoFinal_G8.Controladores;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,7 @@ namespace ProyectoFinal_G8.Vistas
         public LoginView()
         {
             InitializeComponent();
+            LoginController controlador = new LoginController(this);
         }
 
         private void CheckMostrar_CheckedChanged(object sender, EventArgs e)
@@ -27,9 +29,5 @@ namespace ProyectoFinal_G8.Vistas
             Close();
         }
 
-        private void LoginView_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

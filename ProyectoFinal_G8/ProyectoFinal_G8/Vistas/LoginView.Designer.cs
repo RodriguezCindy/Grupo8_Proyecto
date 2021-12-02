@@ -130,7 +130,6 @@ namespace ProyectoFinal_G8.Vistas
             this.Controls.Add(this.label1);
             this.Name = "LoginView";
             this.Text = "Login";
-            this.Load += new System.EventHandler(this.LoginView_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

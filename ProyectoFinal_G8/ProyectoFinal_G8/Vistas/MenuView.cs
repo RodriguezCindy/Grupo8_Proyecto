@@ -15,5 +15,17 @@ namespace ProyectoFinal_G8.Vistas
         {
             InitializeComponent();
         }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            ClienteView vista = new ClienteView();
+            vista.Show();
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            PaqueteView vista = new PaqueteView();
+            vista.Show();
+        }
     }
 }
