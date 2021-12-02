@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ProyectoFinal_G8.Modelos.DAO
 {
-    public class UsuarioDAO: Conexion
+    public class UsuarioDAO : Conexion
     {
         SqlCommand comando = new SqlCommand();
         public bool ValidarUsuario(Usuario user)

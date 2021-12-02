@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace ProyectoFinal_G8.Controladores
 {
-    public class ClientesController
+    public class ClienteController
     {
         ClienteView vista;
         String operacion = string.Empty;
         ClienteDAO userDAO = new ClienteDAO();
         Cliente user = new Cliente();
-        public ClientesController(ClienteView view)
+        public ClienteController(ClienteView view)
         {
             vista = view;
             vista.btn_nuevo.Click += new EventHandler(Nuevo);
@@ -41,16 +41,16 @@ namespace ProyectoFinal_G8.Controladores
                 vista.txt_nombre.Focus();
                 return;
             }
-            if (vista.txt_telefono.Text == "")
-            {
-                vista.errorProvider1.SetError(vista.txt_telefono, "Ingrese un nùmero de telefono");
-                vista.txt_telefono.Focus();
-                return;
-            }
             if (vista.txt_email.Text == "")
             {
                 vista.errorProvider1.SetError(vista.txt_email, "Ingrese un email");
                 vista.txt_email.Focus();
+                return;
+            }
+            if (vista.txt_telefono.Text == "")
+            {
+                vista.errorProvider1.SetError(vista.txt_telefono, "Ingrese un nùmero de telefono");
+                vista.txt_telefono.Focus();
                 return;
             }
             if (vista.txt_direccion.Text == "")
@@ -61,7 +61,7 @@ namespace ProyectoFinal_G8.Controladores
             }
             user.Nombre = vista.txt_nombre.Text;
             user.Email = vista.txt_email.Text;
-            user.Telefono =Convert.ToInt32( vista.txt_telefono.Text);
+            user.Telefono = Convert.ToInt32(vista.txt_telefono.Text);
             user.Direccion = vista.txt_direccion.Text;
 
 
@@ -125,6 +125,5 @@ namespace ProyectoFinal_G8.Controladores
             vista.txt_direccion.Clear();
 
         }
-
     }
 }

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ProyectoFinal_G8.Modelos.DAO
 {
-    public class ClienteDAO : Conexion
+    public class ClienteDAO:Conexion
     {
         SqlCommand comando = new SqlCommand();
 
@@ -51,14 +51,12 @@ namespace ProyectoFinal_G8.Modelos.DAO
                 comando.CommandType = System.Data.CommandType.Text;
                 comando.CommandText = sql.ToString();
                 SqlDataReader dr = comando.ExecuteReader();
-                 dat.Load(dr);
+                dat.Load(dr);
             }
             catch (Exception)
             {
             }
             return dat;
         }
-
-     
     }
 }

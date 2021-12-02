@@ -17,7 +17,7 @@ namespace ProyectoFinal_G8.Vistas
         {
             InitializeComponent();
 
-            ClientesController controlador = new ClientesController(this);
+            ClienteController controlador = new ClienteController(this);
         }
     }
 }
