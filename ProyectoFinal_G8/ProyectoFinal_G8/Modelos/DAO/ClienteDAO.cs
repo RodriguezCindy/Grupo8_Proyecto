@@ -26,7 +26,7 @@ namespace ProyectoFinal_G8.Modelos.DAO
                 comando.CommandText = sql.ToString();
                 comando.Parameters.Add("@Nombre", SqlDbType.NVarChar, 50).Value = user.Nombre;
                 comando.Parameters.Add("@Email", SqlDbType.NVarChar, 50).Value = user.Email;
-                comando.Parameters.Add("@Telefono", SqlDbType.NVarChar, 8).Value = user.Telefono;
+                comando.Parameters.Add("@Telefono", SqlDbType.Int).Value = user.Telefono;
                 comando.Parameters.Add("@Direccion", SqlDbType.NVarChar, 100).Value = user.Direccion;
                 comando.ExecuteNonQuery();
                 return true;

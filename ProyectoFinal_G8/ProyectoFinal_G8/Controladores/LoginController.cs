@@ -19,28 +19,28 @@ namespace ProyectoFinal_G8.Controladores
             vista = view;
             vista.btn_aceptar.Click += new EventHandler(ValidarUsuario);
         }
-        private void ValidarUsuario(object sender, EventArgs e)
+
+        private void ValidarUsuario(Object sender, EventArgs e)
         {
             bool esValido = false;
-            UsuarioDAO userDao = new UsuarioDAO();
+            UsuarioDAO userDAO = new UsuarioDAO();
             Usuario user = new Usuario();
 
             user.Email = vista.txt_email.Text;
             user.Clave = EncriptarClave(vista.txt_contrasena.Text);
 
-            esValido = userDao.ValidarUsuario(user);
+            esValido = userDAO.ValidarUsuario(user);
+
             if (esValido)
             {
-
                 MenuView menu = new MenuView();
                 vista.Hide();
                 menu.Show();
             }
             else
             {
-                MessageBox.Show("Usuario incorrecto");
+                MessageBox.Show("Usuario Incorrecto");
             }
-
         }
 
         public static string EncriptarClave(string str)
@@ -54,6 +54,5 @@ namespace ProyectoFinal_G8.Controladores
             for (int i = 0; i < stream.Length; i++) sb.AppendFormat("{0:x2}", stream[i]);
             return sb.ToString();
         }
-
     }
 }

@@ -59,14 +59,14 @@ namespace ProyectoFinal_G8.Controladores
                 vista.txt_direccion.Focus();
                 return;
             }
-
             user.Nombre = vista.txt_nombre.Text;
             user.Email = vista.txt_email.Text;
-            user.Telefono = vista.txt_telefono.Text;
+            user.Telefono =Convert.ToInt32( vista.txt_telefono.Text);
             user.Direccion = vista.txt_direccion.Text;
-            bool insertar = userDAO.GuardarCliente(user);
 
-            if (insertar)
+
+            bool GuardarC = userDAO.GuardarCliente(user);
+            if (GuardarC)
             {
                 DesabilitarControles();
                 MessageBox.Show("Cliente Guardado Correctamente", "Atenciòn", MessageBoxButtons.OK, MessageBoxIcon.Information);

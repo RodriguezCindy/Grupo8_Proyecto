@@ -73,6 +73,7 @@ namespace ProyectoFinal_G8.Vistas
             this.txt_contrasena.PasswordChar = '*';
             this.txt_contrasena.Size = new System.Drawing.Size(312, 30);
             this.txt_contrasena.TabIndex = 16;
+            this.txt_contrasena.Text = "1234";
             // 
             // txt_email
             // 
@@ -81,6 +82,7 @@ namespace ProyectoFinal_G8.Vistas
             this.txt_email.Name = "txt_email";
             this.txt_email.Size = new System.Drawing.Size(312, 30);
             this.txt_email.TabIndex = 15;
+            this.txt_email.Text = "Proyecto@gmail.com";
             // 
             // label2
             // 
