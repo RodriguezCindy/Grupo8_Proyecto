@@ -110,7 +110,7 @@ namespace ProyectoFinal_G8.Controladores
         //HABILITAR CONTROLES
         private void HabilitarControles()
         {
-            vista.txt_id.Enabled = true;
+            vista.txt_id.Enabled = false;
             vista.txt_nombre.Enabled = true;
             vista.txt_telefono.Enabled = true;
             vista.txt_email.Enabled = true;

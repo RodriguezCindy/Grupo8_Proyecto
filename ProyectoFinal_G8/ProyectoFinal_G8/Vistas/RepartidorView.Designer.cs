@@ -119,12 +119,12 @@ namespace ProyectoFinal_G8.Vistas
             this.panel3.Controls.Add(this.txt_nombre);
             this.panel3.Controls.Add(this.txt_dni);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Enabled = false;
             this.panel3.Location = new System.Drawing.Point(267, 71);
             this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(865, 591);
             this.panel3.TabIndex = 3;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // dataRepartidor
             // 
@@ -194,6 +194,7 @@ namespace ProyectoFinal_G8.Vistas
             // 
             // txt_telefono
             // 
+            this.txt_telefono.Enabled = false;
             this.txt_telefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txt_telefono.Location = new System.Drawing.Point(149, 157);
             this.txt_telefono.Margin = new System.Windows.Forms.Padding(4);
@@ -215,6 +216,7 @@ namespace ProyectoFinal_G8.Vistas
             // 
             // txt_id
             // 
+            this.txt_id.Enabled = false;
             this.txt_id.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txt_id.Location = new System.Drawing.Point(149, 7);
             this.txt_id.Margin = new System.Windows.Forms.Padding(4);
@@ -249,6 +251,7 @@ namespace ProyectoFinal_G8.Vistas
             // 
             // txt_nombre
             // 
+            this.txt_nombre.Enabled = false;
             this.txt_nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txt_nombre.Location = new System.Drawing.Point(149, 104);
             this.txt_nombre.Margin = new System.Windows.Forms.Padding(4);
@@ -258,6 +261,7 @@ namespace ProyectoFinal_G8.Vistas
             // 
             // txt_dni
             // 
+            this.txt_dni.Enabled = false;
             this.txt_dni.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txt_dni.Location = new System.Drawing.Point(149, 57);
             this.txt_dni.Margin = new System.Windows.Forms.Padding(4);

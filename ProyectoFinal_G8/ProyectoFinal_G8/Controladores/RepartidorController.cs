@@ -32,8 +32,8 @@ namespace ProyectoFinal_G8.Controladores
         }
         private void Nuevo(object sender, EventArgs e)
         {
-            HabilitarControles();
-            operacion = "Nuevo";
+           HabilitarControles();
+           operacion = "Nuevo";
         }
         //LISTA DE REPARTIDORES
         private void ListarRepartidor()
@@ -63,7 +63,7 @@ namespace ProyectoFinal_G8.Controladores
                 return;
             }
 
-            user.Dni = Convert.ToInt32(vista.txt_dni.Text);
+            user.Dni = Convert.ToInt64(vista.txt_dni.Text);
             user.Nombre = vista.txt_nombre.Text;
             user.Telefono = Convert.ToInt32(vista.txt_telefono.Text);
 
@@ -106,7 +106,8 @@ namespace ProyectoFinal_G8.Controladores
         //HABILITAR CONTROLES
         private void HabilitarControles()
         {
-            vista.txt_id.Enabled = true;
+            vista.txt_id.Enabled = false;
+            vista.txt_dni.Enabled = true;
             vista.txt_nombre.Enabled = true;
             vista.txt_telefono.Enabled = true;
 

@@ -24,7 +24,7 @@ namespace ProyectoFinal_G8.Modelos.DAO
                 MiConexion.Open();
                 comando.CommandType = System.Data.CommandType.Text;
                 comando.CommandText = sql.ToString();
-                comando.Parameters.Add("@Dni", SqlDbType.Int).Value = user.Dni;
+                comando.Parameters.Add("@Dni", SqlDbType.NVarChar, 18).Value = user.Dni;
                 comando.Parameters.Add("@Nombre", SqlDbType.NVarChar, 50).Value = user.Nombre;
                 comando.Parameters.Add("@Telefono", SqlDbType.Int).Value = user.Telefono;
                 comando.ExecuteNonQuery();

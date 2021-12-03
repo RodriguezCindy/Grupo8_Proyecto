@@ -23,5 +23,10 @@ namespace ProyectoFinal_G8.Vistas
         {
             Close();
         }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
