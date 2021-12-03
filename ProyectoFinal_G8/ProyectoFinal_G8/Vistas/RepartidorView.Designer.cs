@@ -29,29 +29,32 @@ namespace ProyectoFinal_G8.Vistas
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataRepartidor = new System.Windows.Forms.DataGridView();
             this.btn_cancelar = new System.Windows.Forms.Button();
             this.btn_borrar = new System.Windows.Forms.Button();
             this.btn_nuevo = new System.Windows.Forms.Button();
             this.btn_guardar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.TelefonoBox = new System.Windows.Forms.TextBox();
+            this.txt_telefono = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txt_id = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.NombreBox = new System.Windows.Forms.TextBox();
-            this.DNIBox = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txt_nombre = new System.Windows.Forms.TextBox();
+            this.txt_dni = new System.Windows.Forms.TextBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataRepartidor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -88,41 +91,54 @@ namespace ProyectoFinal_G8.Vistas
             this.panel2.Size = new System.Drawing.Size(267, 591);
             this.panel2.TabIndex = 2;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ProyectoFinal_G8.Properties.Resources.repartidor1;
+            this.pictureBox1.Location = new System.Drawing.Point(4, 205);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(263, 146);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.panel3.Controls.Add(this.dataGridView1);
+            this.panel3.Controls.Add(this.dataRepartidor);
             this.panel3.Controls.Add(this.btn_cancelar);
             this.panel3.Controls.Add(this.btn_borrar);
             this.panel3.Controls.Add(this.btn_nuevo);
             this.panel3.Controls.Add(this.btn_guardar);
             this.panel3.Controls.Add(this.label5);
-            this.panel3.Controls.Add(this.TelefonoBox);
+            this.panel3.Controls.Add(this.txt_telefono);
             this.panel3.Controls.Add(this.label4);
-            this.panel3.Controls.Add(this.textBox3);
+            this.panel3.Controls.Add(this.txt_id);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.NombreBox);
-            this.panel3.Controls.Add(this.DNIBox);
+            this.panel3.Controls.Add(this.txt_nombre);
+            this.panel3.Controls.Add(this.txt_dni);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Enabled = false;
             this.panel3.Location = new System.Drawing.Point(267, 71);
             this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(865, 591);
             this.panel3.TabIndex = 3;
             // 
-            // dataGridView1
+            // dataRepartidor
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 320);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(865, 267);
-            this.dataGridView1.TabIndex = 12;
+            this.dataRepartidor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataRepartidor.Location = new System.Drawing.Point(0, 320);
+            this.dataRepartidor.Margin = new System.Windows.Forms.Padding(4);
+            this.dataRepartidor.Name = "dataRepartidor";
+            this.dataRepartidor.RowHeadersWidth = 51;
+            this.dataRepartidor.Size = new System.Drawing.Size(865, 267);
+            this.dataRepartidor.TabIndex = 12;
             // 
             // btn_cancelar
             // 
+            this.btn_cancelar.Enabled = false;
             this.btn_cancelar.Location = new System.Drawing.Point(365, 219);
             this.btn_cancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_cancelar.Name = "btn_cancelar";
@@ -130,9 +146,11 @@ namespace ProyectoFinal_G8.Vistas
             this.btn_cancelar.TabIndex = 11;
             this.btn_cancelar.Text = "Cancelar";
             this.btn_cancelar.UseVisualStyleBackColor = true;
+            this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
             // 
             // btn_borrar
             // 
+            this.btn_borrar.Enabled = false;
             this.btn_borrar.Location = new System.Drawing.Point(473, 219);
             this.btn_borrar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_borrar.Name = "btn_borrar";
@@ -153,6 +171,7 @@ namespace ProyectoFinal_G8.Vistas
             // 
             // btn_guardar
             // 
+            this.btn_guardar.Enabled = false;
             this.btn_guardar.Location = new System.Drawing.Point(149, 219);
             this.btn_guardar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_guardar.Name = "btn_guardar";
@@ -173,14 +192,14 @@ namespace ProyectoFinal_G8.Vistas
             this.label5.TabIndex = 7;
             this.label5.Text = "Telefono:";
             // 
-            // TelefonoBox
+            // txt_telefono
             // 
-            this.TelefonoBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.TelefonoBox.Location = new System.Drawing.Point(149, 157);
-            this.TelefonoBox.Margin = new System.Windows.Forms.Padding(4);
-            this.TelefonoBox.Name = "TelefonoBox";
-            this.TelefonoBox.Size = new System.Drawing.Size(424, 26);
-            this.TelefonoBox.TabIndex = 6;
+            this.txt_telefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.txt_telefono.Location = new System.Drawing.Point(149, 157);
+            this.txt_telefono.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_telefono.Name = "txt_telefono";
+            this.txt_telefono.Size = new System.Drawing.Size(424, 26);
+            this.txt_telefono.TabIndex = 6;
             // 
             // label4
             // 
@@ -194,15 +213,15 @@ namespace ProyectoFinal_G8.Vistas
             this.label4.TabIndex = 5;
             this.label4.Text = "ID:";
             // 
-            // textBox3
+            // txt_id
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.textBox3.Location = new System.Drawing.Point(149, 7);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(49, 26);
-            this.textBox3.TabIndex = 4;
+            this.txt_id.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.txt_id.Location = new System.Drawing.Point(149, 7);
+            this.txt_id.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_id.Name = "txt_id";
+            this.txt_id.ReadOnly = true;
+            this.txt_id.Size = new System.Drawing.Size(49, 26);
+            this.txt_id.TabIndex = 4;
             // 
             // label3
             // 
@@ -228,34 +247,27 @@ namespace ProyectoFinal_G8.Vistas
             this.label2.TabIndex = 2;
             this.label2.Text = "DNI:";
             // 
-            // NombreBox
+            // txt_nombre
             // 
-            this.NombreBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.NombreBox.Location = new System.Drawing.Point(149, 104);
-            this.NombreBox.Margin = new System.Windows.Forms.Padding(4);
-            this.NombreBox.Name = "NombreBox";
-            this.NombreBox.Size = new System.Drawing.Size(424, 26);
-            this.NombreBox.TabIndex = 1;
+            this.txt_nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.txt_nombre.Location = new System.Drawing.Point(149, 104);
+            this.txt_nombre.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_nombre.Name = "txt_nombre";
+            this.txt_nombre.Size = new System.Drawing.Size(424, 26);
+            this.txt_nombre.TabIndex = 1;
             // 
-            // DNIBox
+            // txt_dni
             // 
-            this.DNIBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.DNIBox.Location = new System.Drawing.Point(149, 57);
-            this.DNIBox.Margin = new System.Windows.Forms.Padding(4);
-            this.DNIBox.Name = "DNIBox";
-            this.DNIBox.Size = new System.Drawing.Size(424, 26);
-            this.DNIBox.TabIndex = 0;
+            this.txt_dni.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.txt_dni.Location = new System.Drawing.Point(149, 57);
+            this.txt_dni.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_dni.Name = "txt_dni";
+            this.txt_dni.Size = new System.Drawing.Size(424, 26);
+            this.txt_dni.TabIndex = 0;
             // 
-            // pictureBox1
+            // errorProvider1
             // 
-            this.pictureBox1.Image = global::ProyectoFinal_G8.Properties.Resources.repartidor1;
-            this.pictureBox1.Location = new System.Drawing.Point(4, 205);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(263, 146);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.errorProvider1.ContainerControl = this;
             // 
             // RepartidorView
             // 
@@ -270,10 +282,11 @@ namespace ProyectoFinal_G8.Vistas
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataRepartidor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -285,18 +298,19 @@ namespace ProyectoFinal_G8.Vistas
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button btn_cancelar;
-        private System.Windows.Forms.Button btn_borrar;
-        private System.Windows.Forms.Button btn_nuevo;
-        private System.Windows.Forms.Button btn_guardar;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox TelefonoBox;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox NombreBox;
-        private System.Windows.Forms.TextBox DNIBox;
+        public System.Windows.Forms.ErrorProvider errorProvider1;
+        public System.Windows.Forms.Button btn_cancelar;
+        public System.Windows.Forms.Button btn_borrar;
+        public System.Windows.Forms.Button btn_nuevo;
+        public System.Windows.Forms.Button btn_guardar;
+        public System.Windows.Forms.TextBox txt_telefono;
+        public System.Windows.Forms.TextBox txt_id;
+        public System.Windows.Forms.TextBox txt_nombre;
+        public System.Windows.Forms.TextBox txt_dni;
+        public System.Windows.Forms.DataGridView dataRepartidor;
     }
 }

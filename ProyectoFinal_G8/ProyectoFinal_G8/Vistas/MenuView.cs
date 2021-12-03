@@ -27,5 +27,11 @@ namespace ProyectoFinal_G8.Vistas
             PaqueteView vista = new PaqueteView();
             vista.Show();
         }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            RepartidorView vista = new RepartidorView();
+            vista.Show();
+        }
     }
 }

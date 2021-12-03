@@ -35,6 +35,8 @@ namespace ProyectoFinal_G8.Vistas
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.txt_direccion = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.DATACLIENTE = new System.Windows.Forms.DataGridView();
             this.btn_cancelar = new System.Windows.Forms.Button();
             this.btn_borrar = new System.Windows.Forms.Button();
@@ -48,8 +50,6 @@ namespace ProyectoFinal_G8.Vistas
             this.label2 = new System.Windows.Forms.Label();
             this.txt_email = new System.Windows.Forms.TextBox();
             this.txt_nombre = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txt_direccion = new System.Windows.Forms.TextBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -128,6 +128,29 @@ namespace ProyectoFinal_G8.Vistas
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(801, 502);
             this.panel3.TabIndex = 4;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // txt_direccion
+            // 
+            this.txt_direccion.Enabled = false;
+            this.txt_direccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.txt_direccion.Location = new System.Drawing.Point(149, 204);
+            this.txt_direccion.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_direccion.Name = "txt_direccion";
+            this.txt_direccion.Size = new System.Drawing.Size(424, 26);
+            this.txt_direccion.TabIndex = 14;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label6.Location = new System.Drawing.Point(29, 210);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(86, 20);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "Direcciòn:";
             // 
             // DATACLIENTE
             // 
@@ -170,6 +193,7 @@ namespace ProyectoFinal_G8.Vistas
             this.btn_nuevo.TabIndex = 9;
             this.btn_nuevo.Text = "Nuevo";
             this.btn_nuevo.UseVisualStyleBackColor = true;
+            this.btn_nuevo.Click += new System.EventHandler(this.btn_nuevo_Click);
             // 
             // btn_guardar
             // 
@@ -181,6 +205,7 @@ namespace ProyectoFinal_G8.Vistas
             this.btn_guardar.TabIndex = 8;
             this.btn_guardar.Text = "Guardar";
             this.btn_guardar.UseVisualStyleBackColor = true;
+            this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_Click);
             // 
             // label5
             // 
@@ -270,28 +295,6 @@ namespace ProyectoFinal_G8.Vistas
             this.txt_nombre.Name = "txt_nombre";
             this.txt_nombre.Size = new System.Drawing.Size(424, 26);
             this.txt_nombre.TabIndex = 0;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(29, 210);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(86, 20);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "Direcciòn:";
-            // 
-            // txt_direccion
-            // 
-            this.txt_direccion.Enabled = false;
-            this.txt_direccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txt_direccion.Location = new System.Drawing.Point(149, 204);
-            this.txt_direccion.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_direccion.Name = "txt_direccion";
-            this.txt_direccion.Size = new System.Drawing.Size(424, 26);
-            this.txt_direccion.TabIndex = 14;
             // 
             // errorProvider1
             // 

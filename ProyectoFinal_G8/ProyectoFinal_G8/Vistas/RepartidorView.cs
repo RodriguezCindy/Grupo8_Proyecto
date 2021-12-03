@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProyectoFinal_G8.Controladores;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,12 @@ namespace ProyectoFinal_G8.Vistas
         public RepartidorView()
         {
             InitializeComponent();
+            RepartidorController controlador = new RepartidorController(this);
+        }
+
+        private void btn_cancelar_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

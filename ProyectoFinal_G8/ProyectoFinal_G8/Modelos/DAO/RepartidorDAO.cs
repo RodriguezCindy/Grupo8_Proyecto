@@ -9,44 +9,42 @@ using System.Threading.Tasks;
 
 namespace ProyectoFinal_G8.Modelos.DAO
 {
-    public class ClienteDAO: Conexion
+    public class RepartidorDAO: Conexion
     {
         SqlCommand comando = new SqlCommand();
-
-        public bool GuardarCliente(Cliente user)
+        public bool GuardarRepartidor(Repartidor user)
         {
-            bool inserto = false;
+            bool guardar = false;
             try
             {
                 StringBuilder sql = new StringBuilder();
-                sql.Append(" INSERT INTO CLIENTE ");
-                sql.Append(" VALUES (@Nombre, @Email, @Telefono, @Direccion) ");
+                sql.Append(" INSERT INTO REPARTIDOR ");
+                sql.Append(" VALUES (@Dni, @Nombre, @Telefono) ");
                 comando.Connection = MiConexion;
                 MiConexion.Open();
                 comando.CommandType = System.Data.CommandType.Text;
                 comando.CommandText = sql.ToString();
+                comando.Parameters.Add("@Dni", SqlDbType.Int).Value = user.Dni;
                 comando.Parameters.Add("@Nombre", SqlDbType.NVarChar, 50).Value = user.Nombre;
-                comando.Parameters.Add("@Email", SqlDbType.NVarChar, 50).Value = user.Email;
                 comando.Parameters.Add("@Telefono", SqlDbType.Int).Value = user.Telefono;
-                comando.Parameters.Add("@Direccion", SqlDbType.NVarChar, 100).Value = user.Direccion;
                 comando.ExecuteNonQuery();
-                inserto = true;
+                guardar = true;
                 MiConexion.Close();
             }
-            catch (Exception e )
+            catch (Exception e)
             {
-                inserto = false;
+                guardar = false;
             }
-            return inserto;
+            return guardar;
         }
 
-        public bool EliminarCliente(int id)
+        public bool EliminarRepartidor(int id)
         {
             bool eliminar = false;
             try
             {
                 StringBuilder sql = new StringBuilder();
-                sql.Append(" DELETE FROM CLIENTE ");
+                sql.Append(" DELETE FROM REPARTIDOR ");
                 sql.Append(" WHERE ID = @Id; ");
                 comando.Connection = MiConexion;
                 MiConexion.Open();
@@ -54,7 +52,7 @@ namespace ProyectoFinal_G8.Modelos.DAO
                 comando.CommandText = sql.ToString();
                 comando.Parameters.Add("@Id", SqlDbType.Int).Value = id;
                 comando.ExecuteNonQuery();
-                eliminar  = true;
+                eliminar = true;
                 MiConexion.Close();
 
             }
@@ -65,14 +63,14 @@ namespace ProyectoFinal_G8.Modelos.DAO
             return eliminar;
         }
 
-        public DataTable GetUsuario()
+        public DataTable GetRepartidor()
         {
             DataTable dat = new DataTable();
             try
             {
                 StringBuilder sql = new StringBuilder();
 
-                sql.Append(" SELECT * FROM CLIENTE");
+                sql.Append(" SELECT * FROM REPARTIDOR");
                 comando.Connection = MiConexion;
                 MiConexion.Open();
                 comando.CommandType = System.Data.CommandType.Text;

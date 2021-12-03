@@ -10,42 +10,50 @@ using System.Windows.Forms;
 
 namespace ProyectoFinal_G8.Controladores
 {
-    public class ClienteController
+    public class RepartidorController
     {
-        ClienteView vista;
-        ClienteDAO userDAO = new ClienteDAO();
-        Cliente user = new Cliente();
+        RepartidorView vista;
+        RepartidorDAO userDAO = new RepartidorDAO();
+        Repartidor user = new Repartidor();
         String operacion = string.Empty;
-        public ClienteController(ClienteView view)
+
+        public RepartidorController(RepartidorView view)
         {
             vista = view;
             vista.btn_nuevo.Click += new EventHandler(Nuevo);
             vista.btn_guardar.Click += new EventHandler(Guardar);
             vista.Load += new EventHandler(Load);
             vista.btn_borrar.Click += new EventHandler(Eliminar);
-
         }
+
         private void Load(object sender, EventArgs e)
         {
-            ListarCliente();
+            ListarRepartidor();
         }
         private void Nuevo(object sender, EventArgs e)
         {
             HabilitarControles();
             operacion = "Nuevo";
         }
+        //LISTA DE REPARTIDORES
+        private void ListarRepartidor()
+        {
+            vista.dataRepartidor.DataSource = userDAO.GetRepartidor();
+        }
+
+        //GUARDAR REPARTIDORES
         private void Guardar(object sender, EventArgs e)
         {
-            if (vista.txt_nombre.Text == "")
+            if (vista.txt_dni.Text == "")
             {
-                vista.errorProvider1.SetError(vista.txt_nombre, "Ingrese el nombre");
-                vista.txt_nombre.Focus();
+                vista.errorProvider1.SetError(vista.txt_dni, "Ingrese su nùmero de identificaciòn");
+                vista.txt_dni.Focus();
                 return;
             }
-            if (vista.txt_email.Text == "")
+            if (vista.txt_nombre.Text == "")
             {
-                vista.errorProvider1.SetError(vista.txt_email, "Ingrese un email");
-                vista.txt_email.Focus();
+                vista.errorProvider1.SetError(vista.txt_nombre, "Ingrese un nombre");
+                vista.txt_nombre.Focus();
                 return;
             }
             if (vista.txt_telefono.Text == "")
@@ -54,55 +62,43 @@ namespace ProyectoFinal_G8.Controladores
                 vista.txt_telefono.Focus();
                 return;
             }
-            if (vista.txt_direccion.Text == "")
-            {
-                vista.errorProvider1.SetError(vista.txt_direccion, "Ingrese la direccion");
-                vista.txt_direccion.Focus();
-                return;
-            }
-            user.Nombre = vista.txt_nombre.Text;
-            user.Email = vista.txt_email.Text;
-            user.Telefono = Convert.ToInt32(vista.txt_telefono.Text);
-            user.Direccion = vista.txt_direccion.Text;
 
-            bool GuardarC = userDAO.GuardarCliente(user);
-            if (GuardarC)
+            user.Dni = Convert.ToInt32(vista.txt_dni.Text);
+            user.Nombre = vista.txt_nombre.Text;
+            user.Telefono = Convert.ToInt32(vista.txt_telefono.Text);
+
+            bool GuardarR = userDAO.GuardarRepartidor(user);
+            if (GuardarR)
             {
                 DesabilitarControles();
-                MessageBox.Show("Cliente Guardado Correctamente", "Atenciòn", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Repartidor Guardado Correctamente", "Atenciòn", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LimpiarControles();
-                ListarCliente();
+                ListarRepartidor();
             }
             else
             {
-                MessageBox.Show("No se pudo guardar el cliente", "Atenciòn", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("No se pudo guardar el Repartidor", "Atenciòn", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
         }
 
-        //LISTA DE CLIENTES
-        private void ListarCliente()
-        {
-            vista.DATACLIENTE.DataSource = userDAO.GetUsuario();
-        }
-
-        //ELIMINAR CLIENTE
+        //ELIMINAR REPARTIDOR
         private void Eliminar(object sender, EventArgs e)
         {
-            if (vista.DATACLIENTE.SelectedRows.Count > 0)
+            if (vista.dataRepartidor.SelectedRows.Count > 0)
             {
-                bool eliminado = userDAO.EliminarCliente(Convert.ToInt32(vista.DATACLIENTE.CurrentRow.Cells[0].Value.ToString()));
+                bool eliminado = userDAO.EliminarRepartidor(Convert.ToInt32(vista.dataRepartidor.CurrentRow.Cells[0].Value.ToString()));
                 if (eliminado)
                 {
-                    
-                    MessageBox.Show("Cliente Eliminado Exitosamente", "Atenciòn", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    ListarCliente();
+
+                    MessageBox.Show("Repartidor Eliminado Exitosamente", "Atenciòn", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ListarRepartidor();
                     DesabilitarControles();
                     LimpiarControles();
                 }
                 else
                 {
-                    MessageBox.Show("El Cliente No Fue Eliminado", "Atenciòn", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("El Repartidor No Fue Eliminado", "Atenciòn", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
             }
@@ -113,13 +109,11 @@ namespace ProyectoFinal_G8.Controladores
             vista.txt_id.Enabled = true;
             vista.txt_nombre.Enabled = true;
             vista.txt_telefono.Enabled = true;
-            vista.txt_email.Enabled = true;
-            vista.txt_direccion.Enabled = true;
 
             vista.btn_cancelar.Enabled = true;
             vista.btn_guardar.Enabled = true;
             vista.btn_borrar.Enabled = true;
-            vista.btn_nuevo.Enabled = false;
+           vista.btn_nuevo.Enabled = false;
         }
 
         //DESABILITAR CONTROLES
@@ -128,13 +122,11 @@ namespace ProyectoFinal_G8.Controladores
             vista.txt_id.Enabled = false;
             vista.txt_nombre.Enabled = false;
             vista.txt_telefono.Enabled = false;
-            vista.txt_email.Enabled = false;
-            vista.txt_direccion.Enabled = false;
 
+          vista.btn_nuevo.Enabled = true;
             vista.btn_cancelar.Enabled = false;
             vista.btn_guardar.Enabled = false;
             vista.btn_borrar.Enabled = true;
-            vista.btn_nuevo.Enabled = true;
         }
 
         //HABILITAR CONTROLES
@@ -143,9 +135,6 @@ namespace ProyectoFinal_G8.Controladores
             vista.txt_id.Clear();
             vista.txt_nombre.Clear();
             vista.txt_telefono.Clear();
-            vista.txt_email.Clear();
-            vista.txt_direccion.Clear();
-
         }
     }
 }

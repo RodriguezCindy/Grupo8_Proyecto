@@ -19,5 +19,20 @@ namespace ProyectoFinal_G8.Vistas
 
             ClienteController controlador = new ClienteController(this);
         }
+
+        private void btn_nuevo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_guardar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
