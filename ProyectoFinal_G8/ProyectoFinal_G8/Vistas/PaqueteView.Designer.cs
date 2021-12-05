@@ -36,7 +36,6 @@ namespace ProyectoFinal_G8.Vistas
             this.label8 = new System.Windows.Forms.Label();
             this.txtCiudad = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtDepartamento = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.DATACLIENTE = new System.Windows.Forms.DataGridView();
             this.btn_cancelar = new System.Windows.Forms.Button();
@@ -55,6 +54,7 @@ namespace ProyectoFinal_G8.Vistas
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtDepartamento = new System.Windows.Forms.TextBox();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DATACLIENTE)).BeginInit();
             this.panel2.SuspendLayout();
@@ -152,15 +152,6 @@ namespace ProyectoFinal_G8.Vistas
             this.label7.Size = new System.Drawing.Size(56, 17);
             this.label7.TabIndex = 15;
             this.label7.Text = "Ciudad:";
-            // 
-            // txtDepartamento
-            // 
-            this.txtDepartamento.Enabled = false;
-            this.txtDepartamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtDepartamento.Location = new System.Drawing.Point(164, 126);
-            this.txtDepartamento.Name = "txtDepartamento";
-            this.txtDepartamento.Size = new System.Drawing.Size(138, 23);
-            this.txtDepartamento.TabIndex = 14;
             // 
             // label6
             // 
@@ -271,7 +262,7 @@ namespace ProyectoFinal_G8.Vistas
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(63, 9);
+            this.label4.Location = new System.Drawing.Point(127, 12);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(25, 17);
             this.label4.TabIndex = 5;
@@ -292,7 +283,7 @@ namespace ProyectoFinal_G8.Vistas
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(114, 84);
+            this.label3.Location = new System.Drawing.Point(106, 84);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(46, 17);
             this.label3.TabIndex = 3;
@@ -368,6 +359,15 @@ namespace ProyectoFinal_G8.Vistas
             this.label1.TabIndex = 0;
             this.label1.Text = "Paquete de Entrega";
             // 
+            // txtDepartamento
+            // 
+            this.txtDepartamento.Enabled = false;
+            this.txtDepartamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.txtDepartamento.Location = new System.Drawing.Point(164, 126);
+            this.txtDepartamento.Name = "txtDepartamento";
+            this.txtDepartamento.Size = new System.Drawing.Size(138, 23);
+            this.txtDepartamento.TabIndex = 14;
+            // 
             // PaqueteView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -376,7 +376,7 @@ namespace ProyectoFinal_G8.Vistas
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "PaqueteView";
             this.Text = "Paquete";
             this.panel3.ResumeLayout(false);
@@ -397,7 +397,6 @@ namespace ProyectoFinal_G8.Vistas
         public System.Windows.Forms.Label label8;
         public System.Windows.Forms.TextBox txtCiudad;
         public System.Windows.Forms.Label label7;
-        public System.Windows.Forms.TextBox txtDepartamento;
         public System.Windows.Forms.Label label6;
         public System.Windows.Forms.DataGridView DATACLIENTE;
         public System.Windows.Forms.Button btn_cancelar;
@@ -418,5 +417,6 @@ namespace ProyectoFinal_G8.Vistas
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.TextBox txtPeso;
         public System.Windows.Forms.Label label9;
+        public System.Windows.Forms.TextBox txtDepartamento;
     }
 }
