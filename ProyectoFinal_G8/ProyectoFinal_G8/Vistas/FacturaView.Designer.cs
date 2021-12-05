@@ -36,30 +36,30 @@ namespace ProyectoFinal_G8.Vistas
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txtTotal = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtISV = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtDescu = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtSubtotal = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtIDRepartidor = new System.Windows.Forms.TextBox();
+            this.txtIDCliente = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.txtDireccion = new System.Windows.Forms.TextBox();
+            this.btncancelar = new System.Windows.Forms.Button();
+            this.btnborrar = new System.Windows.Forms.Button();
+            this.btnnuevo = new System.Windows.Forms.Button();
+            this.btnguardar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.TelefonoBox = new System.Windows.Forms.TextBox();
+            this.txtFecha = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtIDFactura = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.NombreBox = new System.Windows.Forms.TextBox();
+            this.txtNumPaquete = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -133,30 +133,30 @@ namespace ProyectoFinal_G8.Vistas
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.panel3.Controls.Add(this.label11);
-            this.panel3.Controls.Add(this.textBox8);
+            this.panel3.Controls.Add(this.txtTotal);
             this.panel3.Controls.Add(this.dataGridView1);
             this.panel3.Controls.Add(this.label10);
-            this.panel3.Controls.Add(this.textBox7);
+            this.panel3.Controls.Add(this.txtISV);
             this.panel3.Controls.Add(this.label9);
-            this.panel3.Controls.Add(this.textBox6);
+            this.panel3.Controls.Add(this.txtDescu);
             this.panel3.Controls.Add(this.label8);
-            this.panel3.Controls.Add(this.textBox5);
+            this.panel3.Controls.Add(this.txtSubtotal);
             this.panel3.Controls.Add(this.label7);
-            this.panel3.Controls.Add(this.textBox4);
-            this.panel3.Controls.Add(this.textBox2);
+            this.panel3.Controls.Add(this.txtIDRepartidor);
+            this.panel3.Controls.Add(this.txtIDCliente);
             this.panel3.Controls.Add(this.label6);
-            this.panel3.Controls.Add(this.textBox1);
-            this.panel3.Controls.Add(this.button5);
-            this.panel3.Controls.Add(this.button4);
-            this.panel3.Controls.Add(this.button3);
-            this.panel3.Controls.Add(this.button2);
+            this.panel3.Controls.Add(this.txtDireccion);
+            this.panel3.Controls.Add(this.btncancelar);
+            this.panel3.Controls.Add(this.btnborrar);
+            this.panel3.Controls.Add(this.btnnuevo);
+            this.panel3.Controls.Add(this.btnguardar);
             this.panel3.Controls.Add(this.label5);
-            this.panel3.Controls.Add(this.TelefonoBox);
+            this.panel3.Controls.Add(this.txtFecha);
             this.panel3.Controls.Add(this.label4);
-            this.panel3.Controls.Add(this.textBox3);
+            this.panel3.Controls.Add(this.txtIDFactura);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.NombreBox);
+            this.panel3.Controls.Add(this.txtNumPaquete);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(267, 67);
             this.panel3.Margin = new System.Windows.Forms.Padding(4);
@@ -176,13 +176,13 @@ namespace ProyectoFinal_G8.Vistas
             this.label11.TabIndex = 24;
             this.label11.Text = "Total a pagar:";
             // 
-            // textBox8
+            // txtTotal
             // 
-            this.textBox8.Location = new System.Drawing.Point(257, 347);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(119, 22);
-            this.textBox8.TabIndex = 23;
+            this.txtTotal.Location = new System.Drawing.Point(257, 347);
+            this.txtTotal.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.Size = new System.Drawing.Size(119, 22);
+            this.txtTotal.TabIndex = 23;
             // 
             // dataGridView1
             // 
@@ -206,13 +206,13 @@ namespace ProyectoFinal_G8.Vistas
             this.label10.TabIndex = 22;
             this.label10.Text = "ISV:";
             // 
-            // textBox7
+            // txtISV
             // 
-            this.textBox7.Location = new System.Drawing.Point(257, 300);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(119, 22);
-            this.textBox7.TabIndex = 21;
+            this.txtISV.Location = new System.Drawing.Point(257, 300);
+            this.txtISV.Margin = new System.Windows.Forms.Padding(4);
+            this.txtISV.Name = "txtISV";
+            this.txtISV.Size = new System.Drawing.Size(119, 22);
+            this.txtISV.TabIndex = 21;
             // 
             // label9
             // 
@@ -226,13 +226,13 @@ namespace ProyectoFinal_G8.Vistas
             this.label9.TabIndex = 20;
             this.label9.Text = "Descuento:";
             // 
-            // textBox6
+            // txtDescu
             // 
-            this.textBox6.Location = new System.Drawing.Point(257, 255);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(119, 22);
-            this.textBox6.TabIndex = 19;
+            this.txtDescu.Location = new System.Drawing.Point(257, 255);
+            this.txtDescu.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDescu.Name = "txtDescu";
+            this.txtDescu.Size = new System.Drawing.Size(119, 22);
+            this.txtDescu.TabIndex = 19;
             // 
             // label8
             // 
@@ -246,13 +246,13 @@ namespace ProyectoFinal_G8.Vistas
             this.label8.TabIndex = 18;
             this.label8.Text = "Sub total:";
             // 
-            // textBox5
+            // txtSubtotal
             // 
-            this.textBox5.Location = new System.Drawing.Point(257, 204);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(119, 22);
-            this.textBox5.TabIndex = 17;
+            this.txtSubtotal.Location = new System.Drawing.Point(257, 204);
+            this.txtSubtotal.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSubtotal.Name = "txtSubtotal";
+            this.txtSubtotal.Size = new System.Drawing.Size(119, 22);
+            this.txtSubtotal.TabIndex = 17;
             // 
             // label7
             // 
@@ -266,23 +266,23 @@ namespace ProyectoFinal_G8.Vistas
             this.label7.TabIndex = 16;
             this.label7.Text = "Numero de paquete:";
             // 
-            // textBox4
+            // txtIDRepartidor
             // 
-            this.textBox4.Location = new System.Drawing.Point(536, 7);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(49, 22);
-            this.textBox4.TabIndex = 15;
+            this.txtIDRepartidor.Location = new System.Drawing.Point(536, 7);
+            this.txtIDRepartidor.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIDRepartidor.Name = "txtIDRepartidor";
+            this.txtIDRepartidor.ReadOnly = true;
+            this.txtIDRepartidor.Size = new System.Drawing.Size(49, 22);
+            this.txtIDRepartidor.TabIndex = 15;
             // 
-            // textBox2
+            // txtIDCliente
             // 
-            this.textBox2.Location = new System.Drawing.Point(337, 4);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(49, 22);
-            this.textBox2.TabIndex = 14;
+            this.txtIDCliente.Location = new System.Drawing.Point(337, 4);
+            this.txtIDCliente.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIDCliente.Name = "txtIDCliente";
+            this.txtIDCliente.ReadOnly = true;
+            this.txtIDCliente.Size = new System.Drawing.Size(49, 22);
+            this.txtIDCliente.TabIndex = 14;
             // 
             // label6
             // 
@@ -296,53 +296,54 @@ namespace ProyectoFinal_G8.Vistas
             this.label6.TabIndex = 13;
             this.label6.Text = "Dirección de entrega:";
             // 
-            // textBox1
+            // txtDireccion
             // 
-            this.textBox1.Location = new System.Drawing.Point(257, 155);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(407, 22);
-            this.textBox1.TabIndex = 12;
+            this.txtDireccion.Location = new System.Drawing.Point(257, 155);
+            this.txtDireccion.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDireccion.Name = "txtDireccion";
+            this.txtDireccion.Size = new System.Drawing.Size(407, 22);
+            this.txtDireccion.TabIndex = 12;
             // 
-            // button5
+            // btncancelar
             // 
-            this.button5.Location = new System.Drawing.Point(385, 399);
-            this.button5.Margin = new System.Windows.Forms.Padding(4);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(100, 53);
-            this.button5.TabIndex = 11;
-            this.button5.Text = "Cancelar";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btncancelar.Location = new System.Drawing.Point(385, 399);
+            this.btncancelar.Margin = new System.Windows.Forms.Padding(4);
+            this.btncancelar.Name = "btncancelar";
+            this.btncancelar.Size = new System.Drawing.Size(100, 53);
+            this.btncancelar.TabIndex = 11;
+            this.btncancelar.Text = "Cancelar";
+            this.btncancelar.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnborrar
             // 
-            this.button4.Location = new System.Drawing.Point(536, 399);
-            this.button4.Margin = new System.Windows.Forms.Padding(4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(100, 53);
-            this.button4.TabIndex = 10;
-            this.button4.Text = "Borrar";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnborrar.Location = new System.Drawing.Point(536, 399);
+            this.btnborrar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnborrar.Name = "btnborrar";
+            this.btnborrar.Size = new System.Drawing.Size(100, 53);
+            this.btnborrar.TabIndex = 10;
+            this.btnborrar.Text = "Borrar";
+            this.btnborrar.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnnuevo
             // 
-            this.button3.Location = new System.Drawing.Point(257, 399);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 53);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "Nuevo";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnnuevo.Location = new System.Drawing.Point(257, 399);
+            this.btnnuevo.Margin = new System.Windows.Forms.Padding(4);
+            this.btnnuevo.Name = "btnnuevo";
+            this.btnnuevo.Size = new System.Drawing.Size(100, 53);
+            this.btnnuevo.TabIndex = 9;
+            this.btnnuevo.Text = "Nuevo";
+            this.btnnuevo.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnguardar
             // 
-            this.button2.Location = new System.Drawing.Point(99, 399);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 53);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Aceptar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnguardar.Location = new System.Drawing.Point(99, 399);
+            this.btnguardar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnguardar.Name = "btnguardar";
+            this.btnguardar.Size = new System.Drawing.Size(100, 53);
+            this.btnguardar.TabIndex = 8;
+            this.btnguardar.Text = "Aceptar";
+            this.btnguardar.UseVisualStyleBackColor = true;
+            this.btnguardar.Click += new System.EventHandler(this.button2_Click);
             // 
             // label5
             // 
@@ -356,13 +357,13 @@ namespace ProyectoFinal_G8.Vistas
             this.label5.TabIndex = 7;
             this.label5.Text = "Fecha:";
             // 
-            // TelefonoBox
+            // txtFecha
             // 
-            this.TelefonoBox.Location = new System.Drawing.Point(257, 106);
-            this.TelefonoBox.Margin = new System.Windows.Forms.Padding(4);
-            this.TelefonoBox.Name = "TelefonoBox";
-            this.TelefonoBox.Size = new System.Drawing.Size(119, 22);
-            this.TelefonoBox.TabIndex = 6;
+            this.txtFecha.Location = new System.Drawing.Point(257, 106);
+            this.txtFecha.Margin = new System.Windows.Forms.Padding(4);
+            this.txtFecha.Name = "txtFecha";
+            this.txtFecha.Size = new System.Drawing.Size(119, 22);
+            this.txtFecha.TabIndex = 6;
             // 
             // label4
             // 
@@ -376,14 +377,14 @@ namespace ProyectoFinal_G8.Vistas
             this.label4.TabIndex = 5;
             this.label4.Text = "Nfactura:";
             // 
-            // textBox3
+            // txtIDFactura
             // 
-            this.textBox3.Location = new System.Drawing.Point(140, 4);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(49, 22);
-            this.textBox3.TabIndex = 4;
+            this.txtIDFactura.Location = new System.Drawing.Point(140, 4);
+            this.txtIDFactura.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIDFactura.Name = "txtIDFactura";
+            this.txtIDFactura.ReadOnly = true;
+            this.txtIDFactura.Size = new System.Drawing.Size(49, 22);
+            this.txtIDFactura.TabIndex = 4;
             // 
             // label3
             // 
@@ -409,13 +410,13 @@ namespace ProyectoFinal_G8.Vistas
             this.label2.TabIndex = 2;
             this.label2.Text = "ID Cliente:";
             // 
-            // NombreBox
+            // txtNumPaquete
             // 
-            this.NombreBox.Location = new System.Drawing.Point(257, 53);
-            this.NombreBox.Margin = new System.Windows.Forms.Padding(4);
-            this.NombreBox.Name = "NombreBox";
-            this.NombreBox.Size = new System.Drawing.Size(119, 22);
-            this.NombreBox.TabIndex = 1;
+            this.txtNumPaquete.Location = new System.Drawing.Point(257, 53);
+            this.txtNumPaquete.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNumPaquete.Name = "txtNumPaquete";
+            this.txtNumPaquete.Size = new System.Drawing.Size(119, 22);
+            this.txtNumPaquete.TabIndex = 1;
             // 
             // FacturaView
             // 
@@ -447,29 +448,29 @@ namespace ProyectoFinal_G8.Vistas
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtISV;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtDescu;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtSubtotal;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtIDRepartidor;
+        private System.Windows.Forms.TextBox txtIDCliente;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox txtDireccion;
+        private System.Windows.Forms.Button btncancelar;
+        private System.Windows.Forms.Button btnborrar;
+        private System.Windows.Forms.Button btnnuevo;
+        private System.Windows.Forms.Button btnguardar;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox TelefonoBox;
+        private System.Windows.Forms.TextBox txtFecha;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtIDFactura;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox NombreBox;
+        private System.Windows.Forms.TextBox txtNumPaquete;
     }
 }
