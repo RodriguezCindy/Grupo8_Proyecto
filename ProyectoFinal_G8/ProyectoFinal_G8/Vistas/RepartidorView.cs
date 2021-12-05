@@ -28,5 +28,15 @@ namespace ProyectoFinal_G8.Vistas
         {
 
         }
+
+        private void btn_borrar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_nuevo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
