@@ -63,7 +63,7 @@ namespace ProyectoFinal_G8.Controladores
                 return;
             }
 
-            user.Dni = Convert.ToInt64(vista.txt_dni.Text);
+            user.Dni = vista.txt_dni.Text;
             user.Nombre = vista.txt_nombre.Text;
             user.Telefono = Convert.ToInt32(vista.txt_telefono.Text);
 

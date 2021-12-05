@@ -119,7 +119,6 @@ namespace ProyectoFinal_G8.Vistas
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(649, 480);
             this.panel3.TabIndex = 3;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // dataRepartidor
             // 
@@ -162,7 +161,6 @@ namespace ProyectoFinal_G8.Vistas
             this.btn_borrar.TabIndex = 10;
             this.btn_borrar.Text = "Borrar";
             this.btn_borrar.UseVisualStyleBackColor = false;
-            this.btn_borrar.Click += new System.EventHandler(this.btn_borrar_Click);
             // 
             // btn_nuevo
             // 
@@ -178,7 +176,6 @@ namespace ProyectoFinal_G8.Vistas
             this.btn_nuevo.TabIndex = 9;
             this.btn_nuevo.Text = "Nuevo";
             this.btn_nuevo.UseVisualStyleBackColor = false;
-            this.btn_nuevo.Click += new System.EventHandler(this.btn_nuevo_Click);
             // 
             // btn_guardar
             // 
