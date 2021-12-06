@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ProyectoFinal_G8.Modelos.DAO
 {
-    class PaqueteDAO:Conexion
+   public class PaqueteDAO : Conexion
     {
         SqlCommand comando = new SqlCommand();
         public bool GuardarPaquete(Paquete user)
@@ -19,18 +19,16 @@ namespace ProyectoFinal_G8.Modelos.DAO
             {
                 StringBuilder sql = new StringBuilder();
                 sql.Append(" INSERT INTO PAQUETE ");
-                sql.Append(" VALUES (@Nombre, @Email, @Telefono, @Departamento, @Ciudad, @Direccion, @Peso) ");
+                sql.Append(" VALUES (@Descipcion, @Idcliente, @Direccion, @Telefono, @Peso) ");
                 comando.Connection = MiConexion;
                 MiConexion.Open();
                 comando.CommandType = System.Data.CommandType.Text;
                 comando.CommandText = sql.ToString();
-                comando.Parameters.Add("@Nombre", SqlDbType.Int).Value = user.Nombre_Desti;
-                comando.Parameters.Add("@Email", SqlDbType.NVarChar, 50).Value = user.Email;
-                comando.Parameters.Add("@Telefono", SqlDbType.Int).Value = user.Telefono;
-                comando.Parameters.Add("@Departamento", SqlDbType.Int).Value = user.Departamento;
-                comando.Parameters.Add("@Ciudad", SqlDbType.Int).Value = user.Ciudad;
-                comando.Parameters.Add("@Direccion", SqlDbType.Int).Value = user.Direccion;
-                comando.Parameters.Add("@Peso", SqlDbType.Int).Value = user.Peso;
+                comando.Parameters.Add("@Descipcion", SqlDbType.NVarChar, 100).Value = user.Descripcion;
+                comando.Parameters.Add("@Idcliente", SqlDbType.Int).Value = user.Idcliente;
+                comando.Parameters.Add("@Direccion", SqlDbType.NVarChar, 100).Value = user.Direccion;
+                comando.Parameters.Add("@Telefono", SqlDbType.Int).Value = user.Telefonocliente;
+                comando.Parameters.Add("@Peso", SqlDbType.Decimal).Value = user.Pesolibras;
                 comando.ExecuteNonQuery();
                 guardar = true;
                 MiConexion.Close();
@@ -49,12 +47,12 @@ namespace ProyectoFinal_G8.Modelos.DAO
             {
                 StringBuilder sql = new StringBuilder();
                 sql.Append(" DELETE FROM PAQUETE ");
-                sql.Append(" WHERE ID = @ID; ");
+                sql.Append(" WHERE ID = @Id; ");
                 comando.Connection = MiConexion;
                 MiConexion.Open();
                 comando.CommandType = System.Data.CommandType.Text;
                 comando.CommandText = sql.ToString();
-                comando.Parameters.Add("@ID", SqlDbType.Int).Value = id;
+                comando.Parameters.Add("@Id", SqlDbType.Int).Value = id;
                 comando.ExecuteNonQuery();
                 eliminar = true;
                 MiConexion.Close();
@@ -90,3 +88,4 @@ namespace ProyectoFinal_G8.Modelos.DAO
         }
     }
 }
+

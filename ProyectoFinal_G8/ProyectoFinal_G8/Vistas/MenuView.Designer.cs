@@ -80,7 +80,7 @@ namespace ProyectoFinal_G8.Vistas
             this.ribbonControlAdv1.QuickPanelVisible = false;
             this.ribbonControlAdv1.RibbonHeaderImage = Syncfusion.Windows.Forms.Tools.RibbonHeaderImage.None;
             this.ribbonControlAdv1.RibbonStyle = Syncfusion.Windows.Forms.Tools.RibbonStyle.Office2016;
-            this.ribbonControlAdv1.SelectedTab = this.toolStripTabItem3;
+            this.ribbonControlAdv1.SelectedTab = this.toolStripTabItem1;
             this.ribbonControlAdv1.ShowRibbonDisplayOptionButton = true;
             this.ribbonControlAdv1.Size = new System.Drawing.Size(986, 170);
             this.ribbonControlAdv1.SystemText.QuickAccessDialogDropDownName = "Start menu";
@@ -271,6 +271,7 @@ namespace ProyectoFinal_G8.Vistas
             this.toolStripButton4.Size = new System.Drawing.Size(85, 65);
             this.toolStripButton4.Text = "Factura";
             this.toolStripButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
             // 
             // MenuView
             // 

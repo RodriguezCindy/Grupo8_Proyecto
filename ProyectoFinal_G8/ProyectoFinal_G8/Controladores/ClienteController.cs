@@ -33,6 +33,7 @@ namespace ProyectoFinal_G8.Controladores
         {
             HabilitarControles();
             operacion = "Nuevo";
+            vista.txt_nombre.Focus();
         }
         private void Guardar(object sender, EventArgs e)
         {

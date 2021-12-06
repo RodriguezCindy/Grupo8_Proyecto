@@ -15,23 +15,89 @@ namespace ProyectoFinal_G8.Vistas
         {
             InitializeComponent();
         }
+        ClienteView vistaC;
+        PaqueteView vistaP;
+        RepartidorView vistaR;
+        FacturaView vistaF;
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            ClienteView vista = new ClienteView();
-            vista.Show();
+            if (vistaC == null)
+            {
+                vistaC = new ClienteView();
+                vistaC.MdiParent = this;
+                vistaC.FormClosed += Vista_FormClosed;
+                vistaC.Show();
+            }
+            else
+            {
+                vistaC.Activate();
+            }
+        }
+
+        private void Vista_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            vistaC = null;
         }
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
-            PaqueteView vista = new PaqueteView();
-            vista.Show();
+            if (vistaP == null)
+            {
+                vistaP = new PaqueteView();
+                vistaP.MdiParent = this;
+                vistaP.FormClosed += VistaP_FormClosed;
+                vistaP.Show();
+            }
+            else
+            {
+                vistaP.Activate();
+            }
+        }
+
+        private void VistaP_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            vistaP = null;
         }
 
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
-            RepartidorView vista = new RepartidorView();
-            vista.Show();
+            if (vistaR == null)
+            {
+                vistaR = new RepartidorView();
+                vistaR.MdiParent = this;
+                vistaR.FormClosed += VistaR_FormClosed;
+                vistaR.Show();
+            }
+            else
+            {
+                vistaR.Activate();
+            }
+        }
+
+        private void VistaR_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            vistaR = null;
+        }
+
+        private void toolStripButton4_Click(object sender, EventArgs e)
+        {
+            if (vistaF == null)
+            {
+                vistaF = new FacturaView();
+                vistaF.MdiParent = this;
+                vistaF.FormClosed += VistaF_FormClosed;
+                vistaF.Show();
+            }
+            else
+            {
+                vistaF.Activate();
+            }
+        }
+
+        private void VistaF_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            VistaF = null;
         }
     }
 }

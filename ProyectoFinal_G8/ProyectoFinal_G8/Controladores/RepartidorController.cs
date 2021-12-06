@@ -34,6 +34,7 @@ namespace ProyectoFinal_G8.Controladores
         {
            HabilitarControles();
            operacion = "Nuevo";
+            vista.txt_dni.Focus();
         }
         //LISTA DE REPARTIDORES
         private void ListarRepartidor()

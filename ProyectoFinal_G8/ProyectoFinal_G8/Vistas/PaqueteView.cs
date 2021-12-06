@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProyectoFinal_G8.Controladores;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,7 @@ namespace ProyectoFinal_G8.Vistas
         public PaqueteView()
         {
             InitializeComponent();
+            PaqueteController controlador = new PaqueteController(this);
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)
@@ -25,6 +27,11 @@ namespace ProyectoFinal_G8.Vistas
         private void btn_guardar_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_cancelar_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
