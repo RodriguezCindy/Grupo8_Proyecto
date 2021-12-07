@@ -108,6 +108,7 @@ namespace ProyectoFinal_G8.Controladores
             user.Total = Convert.ToInt32(vista.txtTotal.Text);
 
             bool GuardarR = userDAO.GuardarFactura(user);
+
             if (GuardarR)
             {
                 DesabilitarControles();

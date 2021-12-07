@@ -19,15 +19,15 @@ namespace ProyectoFinal_G8.Modelos.DAO
             {
                 StringBuilder sql = new StringBuilder();
                 sql.Append(" INSERT INTO FACTURA ");
-                sql.Append(" VALUES ( @Idcliente, @NumPaquete, @Fecha, @Direccion, @Subtotal, @Total) ");
+                sql.Append(" VALUES ( @Idcliente, @Numeropaquete, @Fecha, @Direccioncliente, @Subtotal, @Total) ");
                 comando.Connection = MiConexion;
                 MiConexion.Open();
                 comando.CommandType = System.Data.CommandType.Text;
                 comando.CommandText = sql.ToString();
                 comando.Parameters.Add("@Idcliente", SqlDbType.Int).Value = user.IdCliente;
-                comando.Parameters.Add("@NumPaquete", SqlDbType.Int).Value = user.NumeroPaquete;
+                comando.Parameters.Add("@Numeropaquete", SqlDbType.Int).Value = user.NumeroPaquete;
                 comando.Parameters.Add("@Fecha", SqlDbType.DateTime).Value = user.Fecha;
-                comando.Parameters.Add("@Direccion", SqlDbType.NVarChar, 100).Value = user.Direccion;
+                comando.Parameters.Add("@Direccioncliente", SqlDbType.NVarChar, 100).Value = user.Direccion;
                 comando.Parameters.Add("@Subtotal", SqlDbType.Decimal).Value = user.Subtotal;
                 comando.Parameters.Add("@Total", SqlDbType.Decimal).Value = user.Total;
                 comando.ExecuteNonQuery();
