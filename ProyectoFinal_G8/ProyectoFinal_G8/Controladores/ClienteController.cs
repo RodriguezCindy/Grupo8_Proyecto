@@ -111,7 +111,6 @@ namespace ProyectoFinal_G8.Controladores
         //HABILITAR CONTROLES
         private void HabilitarControles()
         {
-            vista.txt_id.Enabled = false;
             vista.txt_nombre.Enabled = true;
             vista.txt_telefono.Enabled = true;
             vista.txt_email.Enabled = true;
@@ -126,7 +125,6 @@ namespace ProyectoFinal_G8.Controladores
         //DESABILITAR CONTROLES
         private void DesabilitarControles()
         {
-            vista.txt_id.Enabled = false;
             vista.txt_nombre.Enabled = false;
             vista.txt_telefono.Enabled = false;
             vista.txt_email.Enabled = false;
@@ -141,7 +139,6 @@ namespace ProyectoFinal_G8.Controladores
         //HABILITAR CONTROLES
         private void LimpiarControles()
         {
-            vista.txt_id.Clear();
             vista.txt_nombre.Clear();
             vista.txt_telefono.Clear();
             vista.txt_email.Clear();

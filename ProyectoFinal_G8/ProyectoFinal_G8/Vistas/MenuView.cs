@@ -86,7 +86,7 @@ namespace ProyectoFinal_G8.Vistas
             {
                 vistaF = new FacturaView();
                 vistaF.MdiParent = this;
-                vistaF.FormClosed += VistaF_FormClosed;
+              //  vistaF.FormClosed += VistaF_FormClosed;
                 vistaF.Show();
             }
             else
@@ -95,9 +95,6 @@ namespace ProyectoFinal_G8.Vistas
             }
         }
 
-        private void VistaF_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            VistaF = null;
-        }
+       
     }
 }

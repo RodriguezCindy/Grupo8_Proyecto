@@ -3,6 +3,7 @@ using ProyectoFinal_G8.Modelos.Entidades;
 using ProyectoFinal_G8.Vistas;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,12 +11,14 @@ using System.Windows.Forms;
 
 namespace ProyectoFinal_G8.Controladores
 {
-   public class PaqueteController
+   public class PaqueteController: Conexion
     {
         PaqueteView vista;
         PaqueteDAO userDAO = new PaqueteDAO();
         Paquete user = new Paquete();
         String operacion = string.Empty;
+        ComboBoxDAO CargarCombo = new ComboBoxDAO();
+      
 
         public PaqueteController(PaqueteView view)
         {
@@ -24,11 +27,35 @@ namespace ProyectoFinal_G8.Controladores
             vista.btn_guardar.Click += new EventHandler(Guardar);
             vista.Load += new EventHandler(Load);
             vista.btn_borrar.Click += new EventHandler(Eliminar);
+            vista.cb_nombre.SelectedIndexChanged += new EventHandler(TreaerCliente);
+            
         }
+        private void ReiniciarCombo()
+        {
+            vista.cb_nombre.Text = "Seleccione El Cliente";
+            vista.txt_id.Text = " ";
+            vista.txt_Direccion.Text = " ";
+            vista.txt_Telefono.Text = " ";
 
+        }
+        private void TreaerCliente(object sender, EventArgs e)
+        {
+            SqlCommand comando = new SqlCommand("SELECT * FROM CLIENTE WHERE NOMBRE='" + vista.cb_nombre.Text + "'", MiConexion);
+            MiConexion.Open();
+            SqlDataReader dr = comando.ExecuteReader();
+            if (dr.Read() == true)
+            {
+                vista.txt_Direccion.Text = dr["DIRECCION"].ToString();
+                vista.txt_Telefono.Text = dr["TELEFONO"].ToString();
+                vista.txt_id.Text = dr["ID"].ToString();
+            }
+            MiConexion.Close();
+        }
         private void Load(object sender, EventArgs e)
         {
             ListarPaquete();
+            ListarCliente();
+            ReiniciarCombo();
         }
         private void Nuevo(object sender, EventArgs e)
         {
@@ -45,16 +72,17 @@ namespace ProyectoFinal_G8.Controladores
         //GUARDAR REPARTIDORES
         private void Guardar(object sender, EventArgs e)
         {
+          
+            if (vista.cb_nombre.Text == "")
+            {
+                vista.errorProvider1.SetError(vista.cb_nombre, "Ingrese el id del destinatario");
+                vista.cb_nombre.Focus();
+                return;
+            }
             if (vista.txt_Descripcion.Text == "")
             {
                 vista.errorProvider1.SetError(vista.txt_Descripcion, "Ingrese la Direccion");
                 vista.txt_Descripcion.Focus();
-                return;
-            }
-            if (vista.txt_IdDestinatario.Text == "")
-            {
-                vista.errorProvider1.SetError(vista.txt_IdDestinatario, "Ingrese el id del destinatario");
-                vista.txt_IdDestinatario.Focus();
                 return;
             }
             if (vista.txt_Direccion.Text == "")
@@ -76,10 +104,10 @@ namespace ProyectoFinal_G8.Controladores
                 return;
             }
 
+            user.Idcliente =Convert.ToInt32( vista.txt_id.Text);
             user.Descripcion = vista.txt_Descripcion.Text;
             user.Direccion = vista.txt_Direccion.Text;
             user.Telefonocliente = Convert.ToInt32(vista.txt_Telefono.Text);
-            user.Idcliente = Convert.ToInt32(vista.txt_IdDestinatario.Text);
             user.Pesolibras = Convert.ToDecimal(vista.txtPeso.Text);
 
             bool GuardarR = userDAO.GuardarPaquete(user);
@@ -121,12 +149,10 @@ namespace ProyectoFinal_G8.Controladores
         //HABILITAR CONTROLES
         private void HabilitarControles()
         {
-            vista.txt_id.Enabled = false;
+        
             vista.txtPeso.Enabled = true;
             vista.txt_Descripcion.Enabled = true;
-            vista.txt_Direccion.Enabled = true;
-            vista.txt_IdDestinatario.Enabled = true;
-            vista.txt_Telefono.Enabled = true;
+            vista.cb_nombre.Enabled = true;
 
             vista.btn_cancelar.Enabled = true;
             vista.btn_guardar.Enabled = true;
@@ -136,13 +162,11 @@ namespace ProyectoFinal_G8.Controladores
 
         //DESABILITAR CONTROLES
         private void DesabilitarControles()
-        {
-            vista.txt_id.Enabled = false;
+        {   
             vista.txtPeso.Enabled = false;
             vista.txt_Descripcion.Enabled = false;
-            vista.txt_Direccion.Enabled = false;
-            vista.txt_IdDestinatario.Enabled = false;
             vista.txt_Telefono.Enabled = false;
+            vista.cb_nombre.Enabled = false;
 
             vista.btn_nuevo.Enabled = true;
             vista.btn_cancelar.Enabled = false;
@@ -153,12 +177,20 @@ namespace ProyectoFinal_G8.Controladores
         //HABILITAR CONTROLES
         private void LimpiarControles()
         {
-            vista.txt_id.Clear();
             vista.txt_Descripcion.Clear();
             vista.txt_Direccion.Clear();
+            vista.txt_id.Clear();
             vista.txtPeso.Clear();
-            vista.txt_IdDestinatario.Clear();
+            vista.cb_nombre.Text = "";
             vista.txt_Telefono.Clear();
+        }
+
+        private void ListarCliente()
+        {
+            vista.cb_nombre.DataSource = CargarCombo.ListarCliente();
+            vista.cb_nombre.DisplayMember = "NOMBRE";
+            vista.cb_nombre.ValueMember = "ID";
+
         }
     }
 }

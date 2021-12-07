@@ -51,17 +51,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controladores\ClienteController.cs" />
+    <Compile Include="Controladores\FacturaController.cs" />
     <Compile Include="Controladores\LoginController.cs" />
     <Compile Include="Controladores\PaqueteController.cs" />
     <Compile Include="Controladores\RepartidorController.cs" />
     <Compile Include="Modelos\DAO\ClienteDAO.cs" />
+    <Compile Include="Modelos\DAO\ComboBoxDAO.cs" />
     <Compile Include="Modelos\DAO\Conexion.cs" />
     <Compile Include="Modelos\DAO\FacturaDAO.cs" />
     <Compile Include="Modelos\DAO\PaqueteDAO.cs" />
     <Compile Include="Modelos\DAO\RepartidorDAO.cs" />
     <Compile Include="Modelos\DAO\UsuarioDAO.cs" />
     <Compile Include="Modelos\Entidades\Cliente.cs" />
-    <Compile Include="Modelos\Entidades\DetalleFactura.cs" />
     <Compile Include="Modelos\Entidades\Factura.cs" />
     <Compile Include="Modelos\Entidades\Paquete.cs" />
     <Compile Include="Modelos\Entidades\Repartidor.cs" />

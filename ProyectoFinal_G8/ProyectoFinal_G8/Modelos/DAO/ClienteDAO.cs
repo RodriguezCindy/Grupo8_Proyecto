@@ -33,7 +33,7 @@ namespace ProyectoFinal_G8.Modelos.DAO
                 inserto = true;
                 MiConexion.Close();
             }
-            catch (Exception e )
+            catch (Exception )
             {
                 inserto = false;
             }

@@ -16,12 +16,12 @@ namespace ProyectoFinal_G8.Vistas
         public FacturaView()
         {
             InitializeComponent();
-            
+            FacturaController controlador = new FacturaController(this);
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btncancelar_Click(object sender, EventArgs e)
         {
-
+            Close();
         }
     }
 }

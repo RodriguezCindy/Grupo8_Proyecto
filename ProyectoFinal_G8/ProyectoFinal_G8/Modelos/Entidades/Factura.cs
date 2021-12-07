@@ -15,7 +15,6 @@ namespace ProyectoFinal_G8.Modelos.Entidades
         public int IdRepartidor { get; set; }
 
         public decimal Subtotal { get; set; }
-        public decimal Descuento { get; set; }
         public decimal ISV { get; set; }
         public decimal Total { get; set; }
         public string Direccion { get; set; }

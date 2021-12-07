@@ -42,8 +42,6 @@ namespace ProyectoFinal_G8.Vistas
             this.btn_guardar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.txt_telefono = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txt_id = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_nombre = new System.Windows.Forms.TextBox();
@@ -112,8 +110,6 @@ namespace ProyectoFinal_G8.Vistas
             this.panel3.Controls.Add(this.btn_guardar);
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.txt_telefono);
-            this.panel3.Controls.Add(this.label4);
-            this.panel3.Controls.Add(this.txt_id);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.txt_nombre);
@@ -209,7 +205,7 @@ namespace ProyectoFinal_G8.Vistas
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(29, 161);
+            this.label5.Location = new System.Drawing.Point(29, 133);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(78, 20);
@@ -220,41 +216,18 @@ namespace ProyectoFinal_G8.Vistas
             // 
             this.txt_telefono.Enabled = false;
             this.txt_telefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txt_telefono.Location = new System.Drawing.Point(149, 158);
+            this.txt_telefono.Location = new System.Drawing.Point(149, 130);
             this.txt_telefono.Margin = new System.Windows.Forms.Padding(4);
             this.txt_telefono.Name = "txt_telefono";
             this.txt_telefono.Size = new System.Drawing.Size(424, 26);
             this.txt_telefono.TabIndex = 6;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(69, 11);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(31, 20);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "ID:";
-            // 
-            // txt_id
-            // 
-            this.txt_id.Enabled = false;
-            this.txt_id.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txt_id.Location = new System.Drawing.Point(149, 7);
-            this.txt_id.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_id.Name = "txt_id";
-            this.txt_id.ReadOnly = true;
-            this.txt_id.Size = new System.Drawing.Size(49, 26);
-            this.txt_id.TabIndex = 4;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(29, 107);
+            this.label3.Location = new System.Drawing.Point(29, 79);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(73, 20);
@@ -266,7 +239,7 @@ namespace ProyectoFinal_G8.Vistas
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(57, 62);
+            this.label2.Location = new System.Drawing.Point(57, 34);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(43, 20);
@@ -277,7 +250,7 @@ namespace ProyectoFinal_G8.Vistas
             // 
             this.txt_nombre.Enabled = false;
             this.txt_nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txt_nombre.Location = new System.Drawing.Point(149, 103);
+            this.txt_nombre.Location = new System.Drawing.Point(149, 75);
             this.txt_nombre.Margin = new System.Windows.Forms.Padding(4);
             this.txt_nombre.Name = "txt_nombre";
             this.txt_nombre.Size = new System.Drawing.Size(424, 26);
@@ -287,7 +260,7 @@ namespace ProyectoFinal_G8.Vistas
             // 
             this.txt_dni.Enabled = false;
             this.txt_dni.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txt_dni.Location = new System.Drawing.Point(149, 57);
+            this.txt_dni.Location = new System.Drawing.Point(149, 29);
             this.txt_dni.Margin = new System.Windows.Forms.Padding(4);
             this.txt_dni.Name = "txt_dni";
             this.txt_dni.Size = new System.Drawing.Size(424, 26);
@@ -329,7 +302,6 @@ namespace ProyectoFinal_G8.Vistas
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         public System.Windows.Forms.ErrorProvider errorProvider1;
@@ -338,7 +310,6 @@ namespace ProyectoFinal_G8.Vistas
         public System.Windows.Forms.Button btn_nuevo;
         public System.Windows.Forms.Button btn_guardar;
         public System.Windows.Forms.TextBox txt_telefono;
-        public System.Windows.Forms.TextBox txt_id;
         public System.Windows.Forms.TextBox txt_nombre;
         public System.Windows.Forms.TextBox txt_dni;
         public System.Windows.Forms.DataGridView dataRepartidor;
